@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commercial Construction</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/coustom.css">
+    <link rel="stylesheet" href="css/customresponsive.css">
+    <link rel="stylesheet" href="assets/bootstrap.min.css">
+
+<style>
+
+/* SECTION */
+.service-section{
+  padding:60px 0;
+}
+
+.service-title{
+  font-weight:700;
+}
+
+/* IMAGE */
+.service-img{
+  width:100%;
+  border-radius:12px;
+}
+
+/* FEATURE BOX */
+.feature-box{
+  border:1px solid #eee;
+  border-radius:10px;
+  padding:15px;
+  transition:0.3s;
+  height:100%;
+}
+.feature-box:hover{
+  box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* SIDEBAR */
+.service-list{
+  background:#f8f8f8;
+  border-radius:12px;
+  position: sticky;
+  top:20px;
+}
+
+.service-list a{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:14px;
+  margin-bottom:8px;
+  text-decoration:none;
+  color:#333;
+  border-radius:8px;
+  transition:0.3s;
+}
+
+.service-list a:hover{
+  background:#ff9800;
+  color:#fff;
+}
+
+.service-list a.active{
+  background:#ff9800;
+  color:#fff;
+}
+
+.arrow{
+  transition:0.3s;
+}
+.service-list a:hover .arrow{
+  transform:translateX(5px);
+}
+
+/* BREADCRUMB */
+.breadcrumb-section {
+  position: relative;
+  background: url('./images/vrn37.jpg') center/cover no-repeat;
+  padding: 100px 0;
+  color: #fff;
+}
+.breadcrumb-section::before {
+  content:"";
+  position:absolute;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.6);
+  top: 2px;
+}
+.breadcrumb-section .container{
+  position:relative;
+  z-index:2;
+}
+.breadcrumb-title{
+  font-size:36px;
+  font-weight:700;
+}
+.breadcrumb a{
+  color:#ff9800;
+  text-decoration:none;
+}
+
+/* MOBILE */
+@media(max-width:991px){
+  .service-list{
+    margin-top:30px;
+  }
+}
+
+</style>
+
+</head>
+
+<body>
+<div class="wrapper">
+
+<div id="header"></div>
+
+<!-- ✅ BREADCRUMB -->
+<section class="breadcrumb-section">
+  <div class="container text-center">
+    <h1 class="breadcrumb-title">Commercial Construction</h1>
+
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb justify-content-center bg-transparent p-0 mt-2">
+        <li class="breadcrumb-item">
+          <a href="#">Home</a>
+        </li>
+        <li class="breadcrumb-item">
+          <a href="#">Services</a>
+        </li>
+        <li class="breadcrumb-item active text-white">
+          Commercial Construction
+        </li>
+      </ol>
+    </nav>
+  </div>
+</section>
+
+<!-- SERVICE -->
+<section class="service-section">
+<div class="container">
+
+<div class="row">
+
+  <!-- LEFT CONTENT -->
+  <div class="col-lg-9">
+
+    <h3 class="service-title mb-3">Commercial Construction</h3>
+
+
+    <img src="images/vrn37.jpg" alt="commercial construction"
+         class="service-img mb-4">
+
+ 
+    <p>
+      At VRN Construction, we deliver high-quality commercial construction solutions tailored for modern businesses.
+    </p>
+
+    <p>
+      Our team ensures every project is executed with precision using advanced construction techniques.
+    </p>
+
+    <!-- FEATURES -->
+    <div class="row mt-4">
+
+      <div class="col-md-6 mb-3">
+        <div class="feature-box">
+          <h6><i class="fas fa-check text-warning"></i> Smart Space Planning</h6>
+          <p>Efficient layouts for productivity.</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 mb-3">
+        <div class="feature-box">
+          <h6><i class="fas fa-check text-warning"></i> Modern Infrastructure</h6>
+          <p>Premium materials & technology.</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 mb-3">
+        <div class="feature-box">
+          <h6><i class="fas fa-check text-warning"></i> Safety Compliance</h6>
+          <p>Strict safety standards followed.</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 mb-3">
+        <div class="feature-box">
+          <h6><i class="fas fa-check text-warning"></i> Timely Delivery</h6>
+          <p>On-time project completion.</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- RIGHT SIDEBAR -->
+  <div class="col-lg-3">
+
+    <div class="service-list">
+
+      <a href="residential.html"><span><i class="fas fa-home"></i> Residential Construction</span><i class="fas fa-arrow-right"></i></a>
+    
+      <a href="commercial.html" class="active"><span><i class="fas fa-building"></i> Commercial Construction</span><i class="fas fa-arrow-right"></i></a>
+    
+      <a href="interior_design.html"><span><i class="fas fa-couch"></i> Interior Design</span><i class="fas fa-arrow-right"></i></a>
+    
+      <a href="exterior.html"><span><i class="fas fa-city"></i> Exterior Design</span><i class="fas fa-arrow-right"></i></a>
+    
+      <a href="2d_planning.html" ><span><i class="fas fa-pencil-ruler"></i> 2D Planning</span><i class="fas fa-arrow-right"></i></a>
+    
+      <a href="3d_elevation.html"><span><i class="fas fa-cube"></i> 3D Elevation</span><i class="fas fa-arrow-right"></i></a>
+    
+      <a href="renovation.html"><span><i class="fas fa-tools"></i> Renovation</span><i class="fas fa-arrow-right"></i></a>
+    
+      <a href="vastuplanning.html" ><span><i class="fas fa-compass"></i> Vastu Planning</span><i class="fas fa-arrow-right"></i></a>
+    
+      <a href="waterproofing.html"  ><span><i class="fas fa-water"></i> Waterproofing</span><i class="fas fa-arrow-right"></i></a>
+    
+    </div>
+
+  </div>
+
+</div>
+
+</div>
+</section>
+
+<div id="footer"></div>
+
+</div>
+
+<script src="assets/jquery-3.2.1.min.js"></script>
+<script src="assets/bootstrap.bundle.min.js"></script>
+<script src="assets/mmenu.js"></script>
+<script src="js/index.js"></script>
+
+</body>
+</html>

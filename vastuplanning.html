@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/coustom.css">
+    <link rel="stylesheet" href="css/customresponsive.css">
+    <link rel="stylesheet" href="assets/bootstrap.min.css">
+
+
+<style>
+
+/* SECTION */
+.service-section{
+  padding:60px 0;
+}
+
+.service-title{
+  font-weight:700;
+}
+
+/* FEATURE BOX */
+.feature-box{
+  border:1px solid #eee;
+  border-radius:12px;
+  padding:20px;
+  text-align:center;
+  transition:0.3s;
+  height:100%;
+  background:#fff;
+}
+.feature-box:hover{
+  box-shadow:0 10px 25px rgba(0,0,0,0.1);
+  transform:translateY(-5px);
+}
+
+/* IMAGE */
+.vastu-img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  border-radius:12px;
+}
+
+
+
+/* BREADCRUMB */
+.breadcrumb-section{
+  background:url('./images/vrn40.jpg') center/cover no-repeat;
+  padding:100px 0;
+  color:#fff;
+  position:relative;
+}
+
+/* MOBILE */
+@media(max-width:991px){
+  .service-list{
+    margin-top:30px;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+
+    <div class="wrapper">
+        <div id="header"></div>
+
+
+
+<!-- BREADCRUMB -->
+<section class="breadcrumb-section">
+  <div class="container text-center">
+    <h1 class="breadcrumb-title">Vastu Planning</h1>
+    <nav class="breadcrumb justify-content-center mt-3">
+        <a href="#">Home</a>
+        <span class="mx-2">/</span>
+        <a href="#">Services</a>
+        <span class="mx-2">/</span>
+        <span class="active">3D Planning</span>
+      </nav>
+  </div>
+</section>
+
+<!-- SERVICE -->
+<section class="service-section">
+<div class="container">
+<div class="row">
+
+<!-- LEFT CONTENT -->
+<div class="col-lg-9">
+
+<div class="row align-items-center">
+
+<!-- TEXT -->
+<div class="col-md-7">
+
+<h3 class="service-title mb-3">Vastu Planning</h3>
+
+<p>
+  Our Vastu planning services ensure your home or workspace is aligned with natural energies,
+  promoting harmony, prosperity, and well-being. We combine traditional Vastu principles with modern design.
+</p>
+
+<p>
+  Proper planning of directions, room placement, and energy flow helps create a balanced environment
+  that supports health, success, and peace of mind.
+</p>
+
+</div>
+
+<!-- IMAGE -->
+<div class="col-md-5 mb-3 mb-md-0">
+  <img src="images/vrn40.jpg"
+       alt="Vastu Planning"
+       class="vastu-img">
+</div>
+
+</div>
+
+<!-- FEATURES -->
+<div class="row mt-4">
+
+  <div class="col-md-6 mb-3">
+    <div class="feature-box">
+      <i class="fas fa-compass text-warning fa-2x mb-2"></i>
+      <h6>Direction Planning</h6>
+      <p>Align building orientation for positive energy flow.</p>
+    </div>
+  </div>
+
+  <div class="col-md-6 mb-3">
+    <div class="feature-box">
+      <i class="fas fa-door-open text-warning fa-2x mb-2"></i>
+      <h6>Entrance Placement</h6>
+      <p>Design entrances to attract prosperity and success.</p>
+    </div>
+  </div>
+
+  <div class="col-md-6 mb-3">
+    <div class="feature-box">
+      <i class="fas fa-bed text-warning fa-2x mb-2"></i>
+      <h6>Room Placement</h6>
+      <p>Optimize room positions for comfort and balance.</p>
+    </div>
+  </div>
+
+  <div class="col-md-6 mb-3">
+    <div class="feature-box">
+      <i class="fas fa-sun text-warning fa-2x mb-2"></i>
+      <h6>Energy Balance</h6>
+      <p>Enhance natural light, airflow, and energy harmony.</p>
+    </div>
+  </div>
+
+</div>
+
+</div>
+
+<!-- RIGHT SIDEBAR -->
+<div class="col-lg-3">
+
+    <div class="service-list">
+
+        <a href="residential.html"><span><i class="fas fa-home"></i> Residential Construction</span><i class="fas fa-arrow-right"></i></a>
+      
+        <a href="commercial.html"><span><i class="fas fa-building"></i> Commercial Construction</span><i class="fas fa-arrow-right"></i></a>
+      
+        <a href="interior_design.html"><span><i class="fas fa-couch"></i> Interior Design</span><i class="fas fa-arrow-right"></i></a>
+      
+        <a href="exterior.html"><span><i class="fas fa-city"></i> Exterior Design</span><i class="fas fa-arrow-right"></i></a>
+      
+        <a href="2d_planning.html" ><span><i class="fas fa-pencil-ruler"></i> 2D Planning</span><i class="fas fa-arrow-right"></i></a>
+      
+        <a href="3d_elevation.html"><span><i class="fas fa-cube"></i> 3D Elevation</span><i class="fas fa-arrow-right"></i></a>
+      
+        <a href="renovation.html"><span><i class="fas fa-tools"></i> Renovation</span><i class="fas fa-arrow-right"></i></a>
+      
+        <a href="vastuplanning.html" class="active" ><span><i class="fas fa-compass"></i> Vastu Planning</span><i class="fas fa-arrow-right"></i></a>
+      
+        <a href="waterproofing.html"  ><span><i class="fas fa-water"></i> Waterproofing</span><i class="fas fa-arrow-right"></i></a>
+      
+      </div>
+
+</div>
+
+</div>
+</div>
+</section>
+
+
+<div id="footer"></div>
+
+</div>
+
+<script src="assets/jquery-3.2.1.min.js"></script>
+<script src="assets/bootstrap.bundle.min.js"></script>
+<script src="assets/mmenu.js"></script>
+<script src="js/index.js"></script>
+
+</body>
+</html>

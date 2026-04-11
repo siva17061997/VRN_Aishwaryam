@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/coustom.css">
+    <link rel="stylesheet" href="css/customresponsive.css">
+    <link rel="stylesheet" href="assets/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/slick.css">
+      <link rel="stylesheet" href="assets/slick-theme.css">
+      <style>
+        /* HERO */
+.about-hero {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+  url('images/aboutbanner.jpg') center/cover no-repeat;
+  color: #fff;
+  padding: 100px 0;
+}
+
+.about-hero h1 {
+  font-size: 42px;
+  font-weight: 700;
+}
+
+/* FORCE LEFT ALIGN */
+.about-section {
+  text-align: left !important;
+}
+
+.about-section ul {
+  text-align: left !important;
+}
+
+/* REMOVE SCROLL */
+html, body {
+  overflow-x: hidden;
+}
+
+/* RESPONSIVE */
+@media (max-width: 991px) {
+  .about-hero {
+    padding: 70px 20px;
+  }
+
+  .about-hero h1 {
+    font-size: 28px;
+  }
+}
+.counter-section {
+  padding: 50px 20px;
+  background: #f1f1f1; /* ✅ light gray background */
+  color: #222;
+}
+
+.counter-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.counter-box {
+  width: 200px;
+  margin: 15px;
+}
+
+.counter-box i {
+  font-size: 35px;
+  margin-bottom: 10px;
+  color: #ff9800;
+}
+
+.counter-box h2 {
+  font-size: 30px;
+  margin: 5px 0;
+  color: #000;
+}
+
+.counter-box p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .counter-box {
+    width: 100%;
+  }
+}
+      </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div id="header"></div>
+
+   
+
+<!-- HERO SECTION -->
+<section class="about-hero" style="margin-bottom: 8px;">
+  <div class="container text-center">
+    <h1>About VRN Construction</h1>
+    <p>Building your dreams with quality, trust, and innovation</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+
+    <h2 class="fw-bold mb-3">About VRN Construction</h2>
+  </div>
+</section>
+
+<!-- ABOUT SECTION -->
+<section class="about-section py-2">
+  <div class="container">
+    <div class="row align-items-center g-4">
+
+      <!-- IMAGE FIRST ON MOBILE -->
+      <div class="col-lg-6 order-1 order-lg-2">
+        <img src="images/aboutus.jpg" class="img-fluid rounded-4 " alt="construction" style="border-radius: 3%;">
+      </div>
+
+      <!-- TEXT -->
+      <div class="col-lg-6 order-2 order-lg-1 text-start">
+      
+
+        <p>
+          At VRN Construction, we are dedicated to delivering superior construction 
+          solutions that combine engineering precision, innovative design, and 
+          uncompromised quality. Under the leadership of 
+          <strong>V. Manoj, B.E (Civil Engineer)</strong>, a 
+          <strong>CMDA Registered Engineer (RE/II/2025/8/0010)</strong>.
+        </p>
+
+        <p>
+          Our approach focuses on transforming ideas into well-structured, durable, 
+          and visually impressive spaces. From concept to completion, we ensure every 
+          detail is carefully planned and executed to meet modern standards.
+        </p>
+
+        <!-- ICON LIST -->
+        <ul class="list-unstyled mt-4">
+          <li class="d-flex mb-2">
+            <i class="fas fa-building text-primary me-2 mt-1"></i>
+            comprehensive residential and commercial construction solutions
+          </li>
+          <li class="d-flex mb-2">
+            <i class="fas fa-paint-roller text-primary me-2 mt-1"></i>
+            innovative interior and exterior design with modern aesthetics
+          </li>
+          <li class="d-flex mb-2">
+            <i class="fas fa-drafting-compass text-primary me-2 mt-1"></i>
+            precision-driven 2d planning and realistic 3d elevation
+          </li>
+          <li class="d-flex mb-2">
+            <i class="fas fa-tools text-primary me-2 mt-1"></i>
+            expert renovation, vastu-compliant planning, and waterproofing solutions
+          </li>
+        </ul>
+      </div>
+
+    </div>
+    <p>
+      At VRN Construction, we don’t just build structures—we create thoughtfully engineered spaces that balance strength, functionality, and refined design. With a detail-oriented approach and a strong technical foundation, every project is executed with precision and accountability from start to finish. Guided by practical expertise and a clear understanding of modern construction standards, we ensure each development is efficient, durable, and tailored to the client’s vision. Our commitment goes beyond completion, focusing on delivering spaces that offer long-term value, structural reliability, and a lasting impression.
+      </p>
+  </div>
+
+  
+</section>
+
+<section class="counter-section">
+  <div class="counter-container">
+
+    <div class="counter-box">
+      <i class="fas fa-briefcase"></i>
+      <h2 class="counter" data-target="120">0</h2>
+      <p>Projects</p>
+    </div>
+
+    <div class="counter-box">
+      <i class="fas fa-smile"></i>
+      <h2 class="counter" data-target="95">0</h2>
+      <p>Happy Clients</p>
+    </div>
+
+    <div class="counter-box">
+      <i class="fas fa-user-friends"></i>
+      <h2 class="counter" data-target="50">0</h2>
+      <p>Team Members</p>
+    </div>
+
+    <div class="counter-box">
+      <i class="fas fa-clock"></i>
+      <h2 class="counter" data-target="10">0</h2>
+      <p>Years Experience</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- MISSION & VISION -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="row g-4">
+
+      <div class="col-md-6">
+        <div class="p-4 bg-white rounded-4 shadow-sm h-100 text-start">
+          <h5 class="fw-bold">
+            <i class="fas fa-bullseye text-danger me-2"></i> Our Mission
+          </h5>
+          <p class="mb-0">
+            To deliver reliable, high-quality construction and design services that exceed 
+            client expectations while maintaining integrity and professionalism.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="p-4 bg-white rounded-4 shadow-sm h-100 text-start">
+          <h5 class="fw-bold">
+            <i class="fas fa-eye text-warning me-2"></i> Our Vision
+          </h5>
+          <p class="mb-0">
+            To become a trusted name in the construction industry by consistently providing 
+            innovative and cost-effective solutions.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+    <div id="footer"></div>
+
+  </div>
+    <script src="assets/jquery-3.2.1.min.js"></script>
+    <script src="assets/bootstrap.bundle.min.js"></script>
+    <script src="assets/mmenu.js"></script>
+    <script src="assets/slick.min.js"></script>
+    <script src="js/index.js"></script>
+            
+    
+</body>
+</html>    
