@@ -22,7 +22,7 @@
     }
 
 	.logo img {
-        max-width: 144px;
+        max-width: 170px;
     }
 	.sidebarbtn-box {
 		margin-top: 5px;
@@ -47,7 +47,7 @@
 	}
 
 	.logo img {
-        max-width: 144px;
+        max-width: 180px;
     }
 
 }
@@ -126,7 +126,10 @@
 @media (min-width: 768px) and (max-width: 875px)
 {
 	.logo img{
-		width: 180px;
+		width:190px !important;
+	}
+	.header-menu {
+		top: 35px;
 	}
 	.btn-get {
 		margin-left: 0px !important;

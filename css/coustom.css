@@ -65,7 +65,13 @@ a:active
     position: relative;
    
 }
-
+.logo img{
+    width:250px;
+}
+.header-menu {
+    position:relative;
+    top:50px;
+}
 .header-dropdown-menu {
     display: none;
     margin: 0;
