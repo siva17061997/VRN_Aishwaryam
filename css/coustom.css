@@ -66,11 +66,15 @@ a:active
    
 }
 .logo img{
-    width:250px;
+    width:120px;
 }
+.logo{
+    text-align: center;
+}
+
 .header-menu {
     position:relative;
-    top:50px;
+    top:29px;
 }
 .header-dropdown-menu {
     display: none;
