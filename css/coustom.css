@@ -133,13 +133,18 @@ a:active
     color: #ff9800;
 }
 
-.social-icon {
-    color: #fff;
-    font-size: 16px;
-    background: #222;
-    padding: 10px;
+.follow-us .social-icon {
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
-    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff !important;
+    font-size: 18px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
 }
 
 /* .social-icon:hover {
@@ -162,12 +167,12 @@ a:active
 
 /* Links hover */
 .footer a:hover {
-    color: #ff9800 !important;
+    /* color: #ff9800 !important; */
 }
 
 /* Social icons */
 .social-icon {
-    color: #000 !important;
+    color: #fff !important;
     background: #eee;
     padding: 11px 12px;
     border-radius: 72%;
@@ -725,6 +730,7 @@ a:active
     background: #ff9800;
     color: #fff;
     padding: 10px 25px;
+    border: 2px solid #ff9800;
     border-radius: 6px;
     text-decoration: none;
     font-weight: 600;
@@ -891,4 +897,74 @@ a:active
     100% {
       transform: rotate(360deg);
     }
+  }
+
+
+
+  .custom-btn{
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Hover Effect */
+  .custom-btn:hover{
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  }
+  
+  /* Click Effect */
+  .custom-btn:active{
+    transform: scale(0.96);
+  }
+  
+  /* Shine Animation */
+  .custom-btn::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.3);
+    transition: 0.5s;
+  }
+  
+  .custom-btn:hover::before{
+    left: 100%;
+  }
+
+
+  /* Facebook */
+.social-icon:nth-child(1){
+    background: #1877F2;
+  }
+  
+  /* Instagram */
+  .social-icon:nth-child(2){
+    background: linear-gradient(
+      45deg,
+      #f09433,
+      #e6683c,
+      #dc2743,
+      #cc2366,
+      #bc1888
+    );
+  }
+  
+  /* YouTube */
+  .social-icon:nth-child(3){
+    background: #FF0000;
+  }
+  
+  /* LinkedIn */
+  .social-icon:nth-child(4){
+    background: #0A66C2;
+  }
+  
+  /* Hover Effect */
+  .social-icon:hover{
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    color: #fff;
   }

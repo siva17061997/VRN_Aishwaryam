@@ -97,12 +97,15 @@
             <div class="row">
                 <div class="col-12 col-md-4 form-group">
                     <input type="text" name="name" class="form-control form-control-lg" id="name" placeholder="Your Name" required />
+                    <small class="error-message text-danger"></small>
                 </div>
                 <div class="col-12 col-md-4 form-group">
                     <input type="email" class="form-control form-control-lg" name="email" id="email" placeholder="Your Email" required />
+                    <small class="error-message text-danger"></small>
                 </div>
                 <div class="col-12 col-md-4 form-group">
                     <input type="tel" class="form-control form-control-lg" name="phone" id="phone" placeholder="Your Phone" required />
+                    <small class="error-message text-danger"></small>
                 </div>
             </div>
 
@@ -110,6 +113,7 @@
             <div class="row mt-3">
                 <div class="col-12 col-md-4 form-group">
                     <input name="city" id="city" placeholder="Full Address" required class="form-control form-control-lg" />
+                    <small class="error-message text-danger"></small>
                 </div>
 
                
@@ -126,6 +130,7 @@
                         <option value="Vastu Planning">Vastu Planning</option>
                         <option value="Waterproofing">Waterproofing</option>
                     </select>
+                    <small class="error-message text-danger"></small>
                 </div>
             </div>
 
@@ -137,7 +142,7 @@
             </div>
 
             <div class="mt-4 text-center">
-                <button id="submit_appointment" type="submit" class="btn btn-primary btn-lg px-5 py-2">
+                <button id="submit_appointment" type="submit" class=" btn-lg px-4 py-1 view-more-btn mt-2 custom-btn">
                     Submit 
                 </button>
             </div>
@@ -161,53 +166,110 @@
 <script src="js/select.js"></script>
 
 <script>
-$(document).ready(function () {
-    // Initialize Select2
-    $('.js-select2').each(function () {
-    $(this).select2({
-        placeholder: "Select Products and Services",
-        closeOnSelect: false,
-        allowClear: true,
-        width: '100%',
-        dropdownParent: $(this).parent()  
-    });
-});
-
-
+    $(document).ready(function () {
     
+        // Initialize Select2
+        $('.js-select2').each(function () {
+            $(this).select2({
+                placeholder: "Select Products and Services",
+                closeOnSelect: false,
+                allowClear: true,
+                width: '100%',
+                dropdownParent: $(this).parent()
+            });
+        });
     
-
-    // Form submission
-    document.getElementById("submit_appointment").addEventListener("click", function (e) {
-        e.preventDefault();
-
-        const submitBtn = this;
-        submitBtn.disabled = true;
-        submitBtn.textContent = "Submitting...";
-
-        const selectedProductsArray = $('#doctor').val() || [];
-        const selectedProducts = selectedProductsArray.join(", ");
-
-        const formData = {
-            name: document.getElementById("name").value,
-            email: document.getElementById("email").value,
-            phone: document.getElementById("phone").value,
-            city: document.getElementById("city").value,
-            doctor: selectedProducts,
-            message: document.querySelector("textarea[name='message']").value,
-        };
-
-        fetch("https://script.google.com/macros/s/AKfycbx9r5jnJ6n9GX0bJ2GRQ1rt1FQglic3qXwXWL4tX495I3vaf3gffRSkc7CQ9ZmEqp5CEg/exec", {
-            method: "POST",
-            body: JSON.stringify(formData),
-            headers: { "Content-Type": "application/json" },
-            mode:'no-cors'
-        })
-        .then(() => window.location.reload())
-        .catch(() => window.location.reload());
+        // Form submission
+        document.getElementById("submit_appointment").addEventListener("click", function (e) {
+    
+            e.preventDefault();
+    
+            // CLEAR OLD ERRORS
+            $('.error-message').text('');
+    
+            // INPUT VALUES
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const phone = document.getElementById("phone").value.trim();
+            const city = document.getElementById("city").value.trim();
+            const selectedProductsArray = $('#doctor').val() || [];
+            const message = document.querySelector("textarea[name='message']").value.trim();
+    
+            let isValid = true;
+    
+            // NAME
+            if (name === "") {
+                $('#name').next('.error-message').text('Please enter your name');
+                isValid = false;
+            }
+    
+            // EMAIL
+            if (email === "") {
+                $('#email').next('.error-message').text('Please enter your email');
+                isValid = false;
+            } else {
+                const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+    
+                if (!email.match(emailPattern)) {
+                    $('#email').next('.error-message').text('Please enter valid email');
+                    isValid = false;
+                }
+            }
+    
+            // PHONE
+            if (phone === "") {
+                $('#phone').next('.error-message').text('Please enter phone number');
+                isValid = false;
+            } else if (phone.length < 10) {
+                $('#phone').next('.error-message').text('Please enter valid phone number');
+                isValid = false;
+            }
+    
+            // ADDRESS
+            if (city === "") {
+                $('#city').next('.error-message').text('Please enter full address');
+                isValid = false;
+            }
+    
+            // SERVICES
+            if (selectedProductsArray.length === 0) {
+                $('#doctor').parent().find('.error-message').text('Please select at least one service');
+                isValid = false;
+            }
+    
+            // STOP FORM IF INVALID
+            if (!isValid) {
+                return;
+            }
+    
+            const submitBtn = this;
+            submitBtn.disabled = true;
+            submitBtn.textContent = "Submitting...";
+    
+            const selectedProducts = selectedProductsArray.join(", ");
+    
+            const formData = {
+                name: name,
+                email: email,
+                phone: phone,
+                city: city,
+                doctor: selectedProducts,
+                message: message,
+            };
+    
+            fetch("https://script.google.com/macros/s/AKfycbx9r5jnJ6n9GX0bJ2GRQ1rt1FQglic3qXwXWL4tX495I3vaf3gffRSkc7CQ9ZmEqp5CEg/exec", {
+                method: "POST",
+                body: JSON.stringify(formData),
+                headers: { "Content-Type": "application/json" },
+                mode: 'no-cors'
+            })
+            .then(() => window.location.reload())
+            .catch(() => window.location.reload());
+    
+        });
+    
     });
-});
-</script>
+    </script>
 
 </body>
 </html>

@@ -163,10 +163,16 @@
 
 @media (max-width: 992px)
 {
-
+	
 }
 @media (min-width: 992px) and (max-width: 1199px)
 {
+	.address-footer{
+		padding: 0px !important; 
+	}
+	.foot-mail{
+		font-size: 12px !important;
+	}
 	.header-menu li {
 		padding: 12px 10px;
 	}      
@@ -182,11 +188,18 @@
 .container
 {
 	width: 1200px !important;
+	
+}
+.address-footer{
+	padding: 0px !important; 
 }
 
 }
 @media (min-width: 1200px) and (max-width:1366px)
 {
+	.address-footer{
+		padding: 0px !important; 
+	}
 	.header-menu li {
 		padding: 12px 13px;
 	}

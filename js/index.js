@@ -45,7 +45,7 @@ $(document).ready(function () {
   $('.card-slide-testimonial').slick({
     dots: false,
     arrows: false,
-    slidesToShow: 3,
+    slidesToShow: 1,
     slidesToScroll: 1,
     autoplay:true,
     arrows:true,
@@ -56,7 +56,7 @@ $(document).ready(function () {
     responsive: [
       {
         breakpoint: 320,
-        settings: { slidesToScroll: 1, slidesToShow: 1, centerMode: false }
+        settings: { slidesToShow: 1, slidesToScroll: 1, centerMode: false }
       },
       {
         breakpoint: 480,
