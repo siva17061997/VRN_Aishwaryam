@@ -66,10 +66,12 @@ a:active
    
 }
 .logo img{
-    width:145px;
+    width:205px;
+    border-radius: 6%;
 }
 .logo{
     text-align: center;
+    margin-top: 5px;
 }
 
 .header-menu {
